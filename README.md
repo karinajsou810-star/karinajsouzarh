@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karina Souza · Talent Acquisition &amp; Recruitment · People Operations</title>
+<meta name="description" content="Talent Acquisition and recruitment specialist for growing companies. I run full-cycle hiring and build the People Operations around it, for SMBs across Europe and Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav>
+<div class="container">
+<a href="index.html" class="logo">Karina <span>Souza</span></a>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#offers">How I can help</a></li>
+<li><a href="#methodology">Methodology</a></li>
+<li><a href="#contact" class="nav-cta">Hire me</a></li>
+</ul>
+</div>
+</nav>
+
+<header class="hero" id="top">
+<div class="container">
+<div class="hero-grid">
+<div>
+<p class="tag">Talent Acquisition · Recruitment · People Operations · EN · PT · ES</p>
+<h1>I build recruitment, and the People Operations <span>around it, from scratch.</span></h1>
+<p class="subhead">I run full-cycle hiring for SMBs and growing companies, and set up the systems that hold it: sourcing, screening, onboarding, retention. I have recruited at high volume in public-sector hiring and built three HR functions from zero, across Europe and Latin America. I build from the inside, not advise from the outside. Available remotely across Europe and Canada.</p>
+<div class="hero-actions">
+<a href="#work" class="btn-primary">See selected work</a>
+<a href="#contact" class="btn-secondary">Work together</a>
+</div>
+</div>
+<div class="hero-photo">
+<img src="assets/karina-portrait.jpg" alt="Karina Souza" loading="eager">
+<div class="hero-photo-badge">
+<div class="stat-num">7.5+</div>
+<div class="stat-label">Years operational HR</div>
+</div>
+</div>
+</div>
+
+<div class="stats">
+<div>
+<div class="stat-num">15/wk</div>
+<div class="stat-label">Placements, high-volume recruiting</div>
+</div>
+<div>
+<div class="stat-num">3</div>
+<div class="stat-label">From-zero HR builds</div>
+</div>
+<div>
+<div class="stat-num">50%</div>
+<div class="stat-label">Workflow efficiency gain</div>
+</div>
+<div>
+<div class="stat-num">0</div>
+<div class="stat-label">Coverage gaps in 7 years</div>
+</div>
+<div>
+<div class="stat-num">3</div>
+<div class="stat-label">Working languages</div>
+</div>
+</div>
+</div>
+</header>
+
+<section id="about">
+<div class="container-narrow">
+<p class="tag">About</p>
+<h2>What I do, and who I do it for.</h2>
+<div class="about-content">
+<p>I run full-cycle recruitment, and I build the People Operations around it.</p>
+<p>I have recruited at two scales. At Portugal's national employment agency I screened 25 to 30 candidates a day and placed around 15 a week, with B2B outreach to private-sector employers keeping the vacancy pipeline full. Inside small businesses, I have been the only person doing the hiring, start to finish: sourcing, screening, the offer, onboarding, and keeping the person past their first year.</p>
+<p>That second context is where the rest of the work comes from. When you are the only HR person in a small company, there is no system to hand a new hire to. You build it. I have done that three times in the last seven and a half years, across hospitality, electrical services, and private services in Europe and Latin America. Three companies that did not have an HR function until they hired me.</p>
+<p>So the work covers the full range around hiring: sourcing, screening, onboarding, internal communications, employee wellbeing, contractor management, and budget oversight. Off-site leadership is the standard context I operate in. At one of my engagements, ownership has been UK-based for over seven years.</p>
+<div class="about-pullquote">
+Recent outcomes: around 15 placements a week sustained in high-volume public-sector recruiting, a 50% workflow efficiency gain at a private services SMB with off-site UK ownership, a 45% improvement in HR data and documentation systems at SPARK Produtos Elétricos (a Brazilian distributor of industrial automation and electrical materials), and zero coverage gaps maintained across a seven-year operational period at my current engagement.
+</div>
+<p>I build from the inside, not advise from the outside.</p>
+<p>Available for remote freelance and fractional engagements across Europe and Canada. Reach me at <a href="mailto:karina.jeronimo@hotmail.com">karina.jeronimo@hotmail.com</a>.</p>
+</div>
+</div>
+</section>
+
+<section id="work" style="background: var(--bg-alt);">
+<div class="container">
+<p class="tag">Selected work</p>
+<h2>Six engagements: high-volume recruitment, a talent strategy consulting engagement, operational HR builds, and internal communications work.</h2>
+<p class="section-intro">Each case includes context, challenge, approach, outcomes, and annotated decisions explaining the reasoning behind specific choices.</p>
+
+<div class="cases-grid">
+<a href="cases/recruitment-pipeline.html" class="case-card">
+<div class="case-tag">Talent Acquisition · High-volume recruitment</div>
+<h3>High-volume recruitment pipeline at a national employment agency</h3>
+<p>Full-cycle recruitment at scale: 25 to 30 candidate profiles screened and matched daily, around 15 placements a week, with B2B employer outreach maintaining the vacancy pipeline.</p>
+<span class="case-link">Read case study →</span>
+</a>
+<a href="cases/talent-lifecycle.html" class="case-card">
+<div class="case-tag">Talent strategy · Consulting engagement</div>
+<h3>Talent lifecycle and retention framework audit</h3>
+<p>A four-month consulting engagement at an executive search firm. I documented their tacit retention model into a four-touchpoint accountability framework that the firm could communicate to clients and teach to new staff.</p>
+<span class="case-link">Read case study →</span>
+</a>
+<a href="cases/lets-talk.html" class="case-card">
+<div class="case-tag">People &amp; Culture · Sensitive-topic communication</div>
+<h3>Let's talk: workplace wellbeing campaign</h3>
+<p>Internal campaign architecture for a wellbeing initiative targeting employees who had stopped engaging with HR-led programs. Trust-first copy that names objections directly.</p>
+<span class="case-link">Read case study →</span>
+</a>
+<a href="cases/distributed-leadership.html" class="case-card">
+<div class="case-tag">Operations · Systems design</div>
+<h3>Communication and workload visibility for distributed leadership</h3>
+<p>Operational systems for an SMB with UK-based ownership: integrated tracking, communication SLAs, contractor evaluation, statutory compliance, and onboarding toolkit.</p>
+<span class="case-link">Read case study →</span>
+</a>
+<a href="cases/cross-unit-coordination.html" class="case-card">
+<div class="case-tag">Operations · Conflict resolution</div>
+<h3>Cross-unit coordination protocol for hospitality</h3>
+<p>Standardized scheduling and communication workflows for a nine-person team shared across hotel and F&amp;B operations. Twice-weekly briefings and shift compromise protocols.</p>
+<span class="case-link">Read case study →</span>
+</a>
+<a href="cases/internal-comms-diagnostic.html" class="case-card">
+<div class="case-tag">Internal Communications · Diagnostic methodology</div>
+<h3>Internal communications diagnostic and employee enablement program</h3>
+<p>A 5-system internal communications audit followed by a 4-module training program for a hospitality SMB. Multi-source diagnostic combining survey, interview, and review analysis.</p>
+<span class="case-link">Read case study →</span>
+</a>
+</div>
+</div>
+</section>
+
+<section id="offers">
+<div class="container">
+<p class="tag">How I can help</p>
+<h2>Three ways to start. Each one is scoped, with a clear deliverable.</h2>
+<p class="section-intro">Most engagements begin with one of these. Fixed scope, named outcome, clear end.</p>
+
+<div class="cases-grid">
+<div class="case-card">
+<div class="case-tag">Recruitment</div>
+<h3>The hiring sprint</h3>
+<p>A fixed-window push to fill a set number of roles, or to clear a hiring backlog, for a company with no recruiter. Sourcing, screening, shortlist, interview coordination, and a pipeline handover at the end.</p>
+</div>
+<div class="case-card">
+<div class="case-tag">Systems</div>
+<h3>Hiring system in a box</h3>
+<p>A two to four week build for a company hiring for the first time or scaling past ten people. An applicant tracking workflow, screening scorecards, a structured interview kit, an onboarding toolkit, and a short hiring playbook.</p>
+</div>
+<div class="case-card">
+<div class="case-tag">Documentation</div>
+<h3>Framework documentation</h3>
+<p>I take an informal process, retention, onboarding, or screening, and turn it into a documented, teachable framework with named owners and a client-facing version.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="methodology" class="methodology-section">
+<div class="container-narrow">
+<p class="tag">Methodology</p>
+<h2>Three diagnostic tools I use to figure out what is actually broken before I design a fix.</h2>
+<p>The first is a 5-system framework I run when communication keeps breaking down somewhere a customer can see it. It maps internal communication across five operational systems: how teams coordinate work, how the company is recognized internally and externally, how values get shared day to day, how feedback flows up and down, and how the company sells. When something looks like a customer service problem, examining all five usually reveals where the breakdown actually starts.</p>
+<p>The second is a structured interview I use when an organization has a strong intuitive practice but no documented model. Owners and operators often cannot articulate the rules that drive their decisions. Probing questions surface those rules. Field observation confirms them. The result is a documented operational model that matches what the organization actually does, not what it describes doing.</p>
+<p>The third is a quantitative survey instrument I deploy as a baseline measurement before designing interventions. It is adapted from a 21-respondent empirical study I co-authored on internal communication, motivation, and job satisfaction, and uses univariate and bivariate analysis to surface where communication breakdowns correlate with disengagement. It tells you where to look before you spend on a fix.</p>
+<p>All three tools build on applied HR theory (recruitment, onboarding, performance management, compensation, career planning) and organizational communication research, which I studied formally during my Bachelor's at the Polytechnic Institute of Leiria. They share an operating principle: what an organization actually does is often different from what it describes doing, and specificity is what makes a framework operationally useful.</p>
+</div>
+</section>
+
+<section id="background">
+<div class="container">
+<p class="tag">Background</p>
+<h2>Education and languages.</h2>
+
+<div class="info-grid">
+<div class="info-block">
+<h3>Education</h3>
+<p><strong>Bachelor's Degree in Human Relations and Organizational Communication</strong></p>
+<p class="label">Polytechnic Institute of Leiria, Portugal · 2024</p>
+<p class="label" style="margin-top: 0.75rem;">Focus areas: Corporate Communication, Human Resources, Organizational Development.</p>
+</div>
+<div class="info-block">
+<h3>Working languages</h3>
+<p><strong>English</strong> · Advanced (C1)</p>
+<p><strong>Portuguese</strong> · Native</p>
+<p><strong>Spanish</strong> · Working</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact-section">
+<div class="container">
+<p class="tag">Contact</p>
+<h2>Let's work together.</h2>
+<p class="section-intro">Send me a brief, a half-formed idea, or a question. I will tell you whether I am the right person for the engagement, and what the next step looks like. I am available for remote freelance and fractional engagements across Europe and Canada.</p>
+
+<div class="contact-grid">
+<div class="contact-item">
+<div class="label">Email</div>
+<div class="value"><a href="mailto:karina.jeronimo@hotmail.com">karina.jeronimo@hotmail.com</a></div>
+</div>
+<div class="contact-item">
+<div class="label">Location</div>
+<div class="value">Lisbon, Portugal · Europe and Canada, remote</div>
+</div>
+<div class="contact-item">
+<div class="label">Response time</div>
+<div class="value">Within 24 hours</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div>© 2026 Karina Souza · Talent Acquisition &amp; Recruitment · People Operations</div>
+<div>Lisbon, Portugal · Europe and Canada</div>
+</div>
+</footer>
+
+</body>
+</html>
