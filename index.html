@@ -9,9 +9,83 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<style>
+    /* ─── Services section ─── */
+    .services-section {
+      padding: 96px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .services-section .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted, #6B6560);
+      margin-bottom: 20px;
+    }
+    .services-section .section-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 400;
+      line-height: 1.25;
+      max-width: 680px;
+      margin-bottom: 64px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+      border: 1px solid var(--border, #DDD7CE);
+    }
+    .service-card {
+      padding: 44px 40px;
+      border: 1px solid var(--border, #DDD7CE);
+      background: var(--bg, #F5F0E8);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: background 0.2s;
+    }
+    .service-card:hover { background: #EDE8DF; }
+    .service-category {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent, #B5764A);
+    }
+    .service-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    .service-desc {
+      font-size: 15px;
+      color: var(--text-muted, #6B6560);
+      line-height: 1.7;
+      flex: 1;
+    }
+    .services-cta {
+      margin-top: 48px;
+      font-size: 16px;
+      color: var(--text-muted, #6B6560);
+    }
+    .services-cta a {
+      color: var(--accent, #B5764A);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .services-cta a:hover { color: var(--text, #1C1C1C); }
+    @media (max-width: 640px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 32px 24px; }
+      .services-section { padding: 64px 20px; }
+    }
+</style>
 </head>
 <body>
-
 <nav>
 <div class="container">
 <a href="index.html" class="logo">Karina <span>Souza</span></a>
@@ -19,12 +93,12 @@
 <li><a href="#about">About</a></li>
 <li><a href="#work">Work</a></li>
 <li><a href="#offers">How I can help</a></li>
+<li><a href="#services">Services</a></li>
 <li><a href="#methodology">Methodology</a></li>
 <li><a href="#contact" class="nav-cta">Hire me</a></li>
 </ul>
 </div>
 </nav>
-
 <header class="hero" id="top">
 <div class="container">
 <div class="hero-grid">
@@ -45,7 +119,6 @@
 </div>
 </div>
 </div>
-
 <div class="stats">
 <div>
 <div class="stat-num">15/wk</div>
@@ -70,7 +143,6 @@
 </div>
 </div>
 </header>
-
 <section id="about">
 <div class="container-narrow">
 <p class="tag">About</p>
@@ -84,13 +156,11 @@
 </div>
 </div>
 </section>
-
 <section id="work" style="background: var(--bg-alt);">
 <div class="container">
 <p class="tag">Selected work</p>
 <h2>Six engagements: high-volume recruitment, a talent strategy consulting engagement, operational HR builds, and internal communications work.</h2>
 <p class="section-intro">Each case includes context, challenge, approach, outcomes, and annotated decisions explaining the reasoning behind specific choices.</p>
-
 <div class="cases-grid">
 <a href="cases/recruitment-pipeline.html" class="case-card">
 <div class="case-tag">Talent Acquisition · High-volume recruitment</div>
@@ -131,13 +201,11 @@
 </div>
 </div>
 </section>
-
 <section id="offers">
 <div class="container">
 <p class="tag">How I can help</p>
 <h2>Three ways to start. Each one is scoped, with a clear deliverable.</h2>
 <p class="section-intro">Most engagements begin with one of these. Fixed scope, named outcome, clear end.</p>
-
 <div class="cases-grid">
 <div class="case-card">
 <div class="case-tag">Recruitment</div>
@@ -158,6 +226,60 @@
 </div>
 </section>
 
+<!-- ── SERVICES SECTION ─────────────────────────────────────────── -->
+<section id="services" style="background: var(--bg-alt);">
+  <div class="services-section">
+
+    <p class="section-label">Services</p>
+
+    <h2 class="section-heading">
+      Four engagements. Fractional, scoped to your stage, no template.
+    </h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <p class="service-category">Operations</p>
+        <h3 class="service-title">People ops for growing teams</h3>
+        <p class="service-desc">
+          For teams that have something in place but are running on workarounds. I map what exists, close the gaps, and build the systems that hold — scheduling, onboarding, vendor coordination, governance.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <p class="service-category">Build</p>
+        <h3 class="service-title">HR build from zero for early-stage startups</h3>
+        <p class="service-desc">
+          For founders at Series A or B with no people function yet. No documentation, no team, no starting point. I build the whole operational layer — process design, onboarding systems, the infrastructure that lets you hire without things slipping.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <p class="service-category">Systems</p>
+        <h3 class="service-title">Onboarding design</h3>
+        <p class="service-desc">
+          Most onboarding problems are process problems. I design onboarding frameworks that get new hires to full operational readiness on day one — not after two weeks of informal handoffs. Built around your actual team structure, your actual gaps.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <p class="service-category">Remote teams</p>
+        <h3 class="service-title">Remote people ops for distributed teams</h3>
+        <p class="service-desc">
+          For companies where leadership and the team aren't in the same building. I build the coordination protocols, reporting cadences, and operational controls that let distributed teams run without constant escalation. Built from eight years of managing a team where the decision-makers were never on site.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="services-cta">
+      <p>If one of these fits where you are, <a href="#contact">get in touch</a>.</p>
+    </div>
+
+  </div>
+</section>
+<!-- ── END SERVICES SECTION ────────────────────────────────────── -->
+
 <section id="methodology" class="methodology-section">
 <div class="container-narrow">
 <p class="tag">Methodology</p>
@@ -168,12 +290,10 @@
 <p>All three tools build on applied HR theory (recruitment, onboarding, performance management, compensation, career planning) and organizational communication research, which I studied formally during my Bachelor's at the Polytechnic Institute of Leiria. They share an operating principle: what an organization actually does is often different from what it describes doing, and specificity is what makes a framework operationally useful.</p>
 </div>
 </section>
-
 <section id="background">
 <div class="container">
 <p class="tag">Background</p>
 <h2>Education and languages.</h2>
-
 <div class="info-grid">
 <div class="info-block">
 <h3>Education</h3>
@@ -190,13 +310,11 @@
 </div>
 </div>
 </section>
-
 <section id="contact" class="contact-section">
 <div class="container">
 <p class="tag">Contact</p>
 <h2>Let's work together.</h2>
 <p class="section-intro">Send me a brief, a half-formed idea, or a question. I will tell you whether I am the right person for the engagement, and what the next step looks like. I am available for remote freelance and fractional engagements across Europe and Canada.</p>
-
 <div class="contact-grid">
 <div class="contact-item">
 <div class="label">Response time</div>
@@ -205,12 +323,10 @@
 </div>
 </div>
 </section>
-
 <footer>
 <div class="container">
 <div>© 2026 Karina Souza · HR &amp; People Operations for founder-led businesses</div>
 </div>
 </footer>
-
 </body>
 </html>
