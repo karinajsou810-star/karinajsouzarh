@@ -1,709 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HR and People Operations specialist for founder-led businesses. I build recruitment functions from scratch and make them run without the founder in the room." />
-  <title>Karina Souza · HR &amp; People Operations</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --black: #0f0f0f;
-      --white: #fff;
-      --off-white: #fafaf8;
-      --grey: #6b6b6b;
-      --border: #e2e2dd;
-      --font: 'Georgia', 'Times New Roman', serif;
-      --sans: system-ui, -apple-system, 'Helvetica Neue', sans-serif;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font);
-      color: var(--black);
-      background: var(--white);
-      font-size: 1.05rem;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2.5rem;
-    }
-
-    .nav-left {
-      display: flex;
-      flex-direction: column;
-      gap: 0.05rem;
-      text-decoration: none;
-    }
-
-    .nav-left .logo {
-      font-family: var(--sans);
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--black);
-      letter-spacing: -0.01em;
-    }
-
-    .nav-left .logo-sub {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      color: var(--grey);
-      font-weight: 400;
-      letter-spacing: 0.02em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-family: var(--sans);
-      font-size: 0.88rem;
-      color: var(--grey);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .nav-links a:hover { color: var(--black); }
-
-    .nav-links a.cta-nav {
-      color: var(--white);
-      background: var(--black);
-      padding: 0.55rem 1.3rem;
-      border-radius: 3px;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition: opacity 0.2s;
-    }
-
-    .nav-links a.cta-nav:hover { opacity: 0.75; color: var(--white); }
-
-    .hero {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 5rem 2.5rem 4rem;
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .hero-text .label {
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--grey);
-      margin-bottom: 1.6rem;
-    }
-
-    .hero-text h1 {
-      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-      line-height: 1.18;
-      font-weight: normal;
-      margin-bottom: 1.4rem;
-      letter-spacing: -0.02em;
-      max-width: 560px;
-    }
-
-    .hero-text .hero-sub {
-      font-family: var(--sans);
-      font-size: 0.97rem;
-      color: var(--grey);
-      margin-bottom: 2.5rem;
-      max-width: 500px;
-      line-height: 1.65;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      font-family: var(--sans);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 0.75rem 1.6rem;
-      border-radius: 3px;
-      transition: opacity 0.2s;
-      display: inline-block;
-      letter-spacing: 0.01em;
-    }
-
-    .btn-primary { background: var(--black); color: var(--white); }
-    .btn-secondary { border: 1px solid #c8c8c4; color: var(--black); background: transparent; }
-    .btn:hover { opacity: 0.72; }
-
-    .hero-portrait { position: relative; }
-
-    .hero-portrait img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: top center;
-      display: block;
-      border-radius: 4px;
-      filter: grayscale(15%);
-    }
-
-    .portrait-note {
-      position: absolute;
-      bottom: -2rem;
-      left: 0;
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      color: var(--grey);
-      letter-spacing: 0.04em;
-    }
-
-    .stat-strip {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 3rem 2.5rem 4rem;
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-      border-top: 1px solid var(--border);
-    }
-
-    .stat { font-family: var(--sans); }
-
-    .stat-number {
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: -0.03em;
-      display: block;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-
-    .stat-label {
-      font-size: 0.77rem;
-      color: var(--grey);
-      letter-spacing: 0.02em;
-    }
-
-    .section-divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 0;
-    }
-
-    .content-section {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 5rem 2.5rem;
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .section-alt { background: var(--off-white); }
-    .section-sidebar { padding-top: 0.3rem; }
-
-    .section-label {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--grey);
-    }
-
-    .section-body h2 {
-      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-      font-weight: normal;
-      line-height: 1.25;
-      margin-bottom: 1.8rem;
-      letter-spacing: -0.02em;
-    }
-
-    .section-body p {
-      color: #2e2e2e;
-      margin-bottom: 1.25rem;
-      max-width: 640px;
-      font-size: 1.02rem;
-    }
-
-    .section-body p:last-child { margin-bottom: 0; }
-
-    .cases-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 0.5rem;
-    }
-
-    .case-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.8rem;
-      transition: border-color 0.2s;
-    }
-
-    .case-card:hover { border-color: #aaa; }
-
-    .case-tag {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--grey);
-      margin-bottom: 0.8rem;
-    }
-
-    .case-card h3 {
-      font-size: 1.05rem;
-      font-weight: normal;
-      line-height: 1.35;
-      margin-bottom: 0.8rem;
-      letter-spacing: -0.01em;
-    }
-
-    .case-card p {
-      font-family: var(--sans);
-      font-size: 0.88rem;
-      color: var(--grey);
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-    }
-
-    .case-link {
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--black);
-    }
-
-    .offers-list {
-      border-top: 1px solid var(--border);
-      margin-top: 0.5rem;
-    }
-
-    .offer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--border);
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .offer-row:last-child { border-bottom: none; }
-
-    .offer-meta .offer-tag {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--grey);
-      margin-bottom: 0.4rem;
-    }
-
-    .offer-meta h3 {
-      font-size: 1.3rem;
-      font-weight: normal;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.3rem;
-    }
-
-    .offer-meta p {
-      font-family: var(--sans);
-      font-size: 0.9rem;
-      color: var(--grey);
-      margin: 0;
-    }
-
-    .proof-block {
-      margin-top: 3.5rem;
-      padding: 2.5rem;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      max-width: 680px;
-    }
-
-    .proof-block h3 {
-      font-size: 1.1rem;
-      font-weight: normal;
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
-    }
-
-    .proof-block p {
-      font-family: var(--sans);
-      font-size: 0.92rem;
-      color: #3a3a3a;
-      line-height: 1.65;
-      margin-bottom: 0.9rem;
-      max-width: 600px;
-    }
-
-    .proof-block p:last-child { margin-bottom: 0; }
-    .proof-stats { font-weight: 600; color: var(--black); }
-
-    .method-block { margin-bottom: 2.5rem; }
-    .method-block:last-child { margin-bottom: 0; }
-
-    .method-block h3 {
-      font-family: var(--sans);
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--black);
-      margin-bottom: 0.6rem;
-    }
-
-    .method-block p {
-      color: #2e2e2e;
-      font-size: 0.98rem;
-      max-width: 600px;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      max-width: 640px;
-    }
-
-    .info-block h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      font-family: var(--sans);
-      margin-bottom: 0.8rem;
-      letter-spacing: 0.02em;
-    }
-
-    .info-block p {
-      font-family: var(--sans);
-      font-size: 0.92rem;
-      color: #3a3a3a;
-      line-height: 1.6;
-      margin-bottom: 0.4rem;
-    }
-
-    .info-block .sublabel {
-      font-family: var(--sans);
-      font-size: 0.78rem;
-      color: var(--grey);
-      letter-spacing: 0.03em;
-    }
-
-    .contact-meta {
-      margin-top: 2.5rem;
-      display: flex;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-      font-family: var(--sans);
-      font-size: 0.9rem;
-    }
-
-    .contact-meta div strong {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-      color: var(--grey);
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .contact-meta a {
-      color: var(--black);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      color: var(--grey);
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 3.5rem 1.5rem 3rem;
-      }
-      .hero-portrait { max-width: 280px; }
-      .portrait-note { display: none; }
-      .content-section {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 3.5rem 1.5rem;
-      }
-      .stat-strip { padding: 2.5rem 1.5rem 3rem; gap: 2rem; }
-      nav { padding: 1rem 1.5rem; }
-      .nav-links a:not(.cta-nav) { display: none; }
-      .cases-grid { grid-template-columns: 1fr; }
-      .info-grid { grid-template-columns: 1fr; gap: 2rem; }
-      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karina Souza Â· HR &amp; People Operations for founder-led businesses</title>
+  <meta name="description" content="HR and People Operations specialist for SMBs with no HR team. I build recruitment functions from scratch and make them run without the founder in the room.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body id="top">
+<body>
 
-  <nav>
-    <a href="#top" class="nav-left" style="text-decoration:none;">
-      <span class="logo">Karina Souza</span>
-      <span class="logo-sub">HR &amp; People Operations</span>
-    </a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#offers">How I can help</a>
-      <a href="#methodology">Methodology</a>
-      <a href="#contact" class="cta-nav">Hire me</a>
-    </div>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-text">
-      <p class="label">HR &amp; People Operations for founder-led businesses</p>
-      <h1>I build the HR infrastructure founders don't have time to figure out.</h1>
-      <p class="hero-sub">If you are hiring, onboarding, and managing vendors yourself, you are the HR department. I have built that function from zero three times and run it remotely for eight years with no one watching.</p>
-      <div class="btn-group">
-        <a href="#work" class="btn btn-primary">See selected work</a>
-        <a href="#contact" class="btn btn-secondary">Work together</a>
-      </div>
-    </div>
-    <div class="hero-portrait">
-      <img src="assets/karina-portrait.jpg" alt="Karina Souza" loading="eager" />
-      <span class="portrait-note">Lisbon, Portugal</span>
-    </div>
-  </section>
-
-  <div class="stat-strip">
-    <div class="stat">
-      <span class="stat-number">7.5+</span>
-      <span class="stat-label">Years operational HR</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">10/wk</span>
-      <span class="stat-label">Placements, high-volume recruiting</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">3</span>
-      <span class="stat-label">From-zero HR builds</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">50%</span>
-      <span class="stat-label">Workflow efficiency gain</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">0</span>
-      <span class="stat-label">Coverage gaps in 7 years</span>
-    </div>
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo"><span>Karina Souza</span></a>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#offers">How I can help</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#contact" class="nav-cta">Hire me</a>
   </div>
+</nav>
 
-  <hr class="section-divider" />
-
-  <div class="content-section" id="about">
-    <div class="section-sidebar">
-      <span class="section-label">About</span>
-    </div>
-    <div class="section-body">
-      <h2>What I do, and who I do it for.</h2>
-      <p>Most HR generalists have a team. I have never had one, and that is why I work well for companies that cannot build one yet.</p>
-      <p>For eight years I have been the only HR person inside a privately held services company whose owners operate from the UK and are never on-site. I built every system from scratch: the onboarding toolkit, the scheduling protocol, the vendor evaluation framework, the governance model. None of them have needed structural changes in seven years. The principals have never needed to travel for routine HR governance.</p>
-      <p>I have also recruited at scale. At a national employment agency I screened 25 to 30 profiles per day and placed around 15 candidates a week across three protected groups, with zero eligibility mismatches. That throughput requires a system, not a habit.</p>
-      <p>I build from the inside, not advise from the outside. Available for remote freelance and fractional engagements across Europe and Canada.</p>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-
-  <div class="section-alt">
-    <div class="content-section" id="work">
-      <div class="section-sidebar">
-        <span class="section-label">Selected work</span>
-      </div>
-      <div class="section-body">
-        <h2>Six engagements across recruitment, operational HR builds, and internal communications.</h2>
-        <p>Each case includes context, challenge, approach, and outcomes.</p>
-        <div class="cases-grid">
-          <a href="cases/talent-lifecycle.html" class="case-card">
-            <div class="case-tag">Talent strategy · Consulting</div>
-            <h3>Extracting a recruitment methodology that lived only in one person's head</h3>
-            <p>Four-month engagement at an executive search firm. Mapped the full process from client intake to placement and delivered it in three versions: operational, training, and client-facing.</p>
-            <span class="case-link">Read case study &rarr;</span>
-          </a>
-          <a href="cases/distributed-leadership.html" class="case-card">
-            <div class="case-tag">Operations · Systems design</div>
-            <h3>Communication and workload visibility for distributed leadership</h3>
-            <p>Operational systems for an SMB with UK-based ownership: integrated tracking, communication SLAs, contractor evaluation, statutory compliance, and onboarding toolkit.</p>
-            <span class="case-link">Read case study &rarr;</span>
-          </a>
+<header class="hero top">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="tag">HR &amp; People Operations for founder-led businesses</div>
+        <h1><span>I build the HR infrastructure founders don&#8217;t have time to figure out. </span><span>Then I make sure it runs without them.</span></h1>
+        <p class="subhead">If you are hiring, onboarding, and managing vendors yourself, you are the HR department. I have built that function from zero three times, and run it remotely for eight years with no one watching. You should not be doing this.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">See selected work</a>
+          <a href="#contact" class="btn-secondary">Work together</a>
         </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/karina-portrait.jpg" alt="Karina Souza" loading="eager">
+        <div class="hero-photo-badge">
+          <div class="stat-num">7.5+</div>
+          <div class="stat-label">Years operational HR</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div>
+        <div class="stat-num">10/wk</div>
+        <div class="stat-label">Private-sector placements</div>
+      </div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">From-zero HR builds</div>
+      </div>
+      <div>
+        <div class="stat-num">50%</div>
+        <div class="stat-label">Workflow efficiency gain</div>
+      </div>
+      <div>
+        <div class="stat-num">0</div>
+        <div class="stat-label">Coverage gaps in 7 years</div>
+      </div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Working languages</div>
       </div>
     </div>
   </div>
+</header>
 
-  <hr class="section-divider" />
-
-  <div class="content-section" id="offers">
-    <div class="section-sidebar">
-      <span class="section-label">How I can help</span>
+<section id="about">
+  <div class="container-narrow">
+    <div class="tag">About</div>
+    <h2>What I do, and who I do it for.</h2>
+    <div class="about-content">
+      <p>Most HR people join a team. I never had one. That is why I work well for founders who cannot build one yet.</p>
+      <p>For eight years I ran the entire HR and people operations function solo &#8212; three permanent staff, seven external providers, owners based in the UK who were never on-site. Every system was mine to design from nothing: onboarding, scheduling, vendor evaluation, governance. None of it needed structural changes in seven years.</p>
+      <p>My degree in Human Relations and Organizational Communication trained me to do something specific: find the gap between how an organization thinks it works and how it actually works. That gap is where every people problem starts. I was reading it in the field before I had a name for it. The degree gave me the frameworks to apply it deliberately. Inside a consulting engagement with an executive search firm, I used that approach to extract the founder&#8217;s tacit recruitment methodology, map it into a documented process model, and deliver it in three versions: one for the team, one for training new recruiters, and one for client pitches.</p>
+      <p>I have also applied it at scale. Inside a government employment agency processing thousands of candidates per week across 53 regional offices, I ran full-cycle hiring across three different candidate profiles at once: 25 to 30 screened per day, ten placed per week as an individual contributor, no placement errors across the full engagement.</p>
     </div>
-    <div class="section-body">
-      <h2>You raised money to build a product. Not to run HR at midnight.</h2>
-      <p>Three ways in. Each one scoped, with a named outcome and a clear end.</p>
-      <div class="offers-list">
-        <div class="offer-row">
-          <div class="offer-meta">
-            <div class="offer-tag">Recruitment · Entry point</div>
-            <h3>The hiring sprint</h3>
-            <p>Your open roles get filled. You stop living in your inbox.</p>
-          </div>
-          <a href="offers/hiring-sprint.html" class="btn btn-secondary" style="white-space:nowrap;flex-shrink:0;">See details &rarr;</a>
+  </div>
+</section>
+
+<section id="work" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="tag">Selected work</div>
+    <h2>Two cases: a methodology consulting engagement and an eight-year operational HR build.</h2>
+    <p class="section-intro">Each case includes context, challenge, approach, outcomes, and annotated decisions explaining the reasoning behind specific choices.</p>
+    <div class="cases-grid">
+      <a href="cases/talent-lifecycle.html" class="case-card">
+        <div class="case-tag">Talent strategy Â· Consulting engagement</div>
+        <h3>Extracting a recruitment methodology that lived only in one person&#8217;s head</h3>
+        <p>An executive search firm had a strong placement record but the method existed only in the founder&#8217;s head. I designed a 15-question diagnostic, mapped the full recruitment process from client intake to placement, and delivered the methodology in three versions: operational, for training, and for client pitches.</p>
+        <span class="case-link">Read case study &#8594;</span>
+      </a>
+      <a href="cases/distributed-leadership.html" class="case-card">
+        <div class="case-tag">Operations Â· Systems design</div>
+        <h3>Communication and workload visibility for distributed leadership</h3>
+        <p>Operational systems for a small business with remote UK ownership: integrated tracking, response-time protocols, contractor evaluation, legal compliance, and an onboarding toolkit the team runs without me.</p>
+        <span class="case-link">Read case study &#8594;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="offers">
+  <div class="container">
+    <div class="tag">How I can help</div>
+    <h2>You raised money to build a product. Not to run HR at midnight.</h2>
+    <p class="section-intro">Three ways in. Each one scoped, with a named outcome and a clear end.</p>
+    <div style="border-top: 1px solid var(--border); margin-top: 1rem;">
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid var(--border); gap: 2rem; flex-wrap: wrap;">
+        <div>
+          <div class="case-tag" style="margin-bottom: 0.5rem;">Recruitment &middot; Entry point</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;">The hiring sprint</h3>
+          <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">Your open roles get filled. You stop living in your inbox.</p>
         </div>
-        <div class="offer-row">
-          <div class="offer-meta">
-            <div class="offer-tag">The build · Most popular</div>
-            <h3>People operations, from zero</h3>
-            <p>You stop being the HR department. The system runs without you in the room.</p>
-          </div>
-          <a href="offers/people-ops-build.html" class="btn btn-secondary" style="white-space:nowrap;flex-shrink:0;">See details &rarr;</a>
-        </div>
-        <div class="offer-row">
-          <div class="offer-meta">
-            <div class="offer-tag">Ongoing · Retainer</div>
-            <h3>Fractional people ops</h3>
-            <p>People operations, handled. You sleep, it runs.</p>
-          </div>
-          <a href="offers/fractional-people-ops.html" class="btn btn-secondary" style="white-space:nowrap;flex-shrink:0;">See details &rarr;</a>
-        </div>
+        <a href="offers/hiring-sprint.html" class="btn-secondary" style="white-space: nowrap; flex-shrink: 0;">See details &#8594;</a>
       </div>
-      <div class="proof-block">
-        <h3>Why a founder trusts this to someone they never see</h3>
-        <p>For eight years I ran people operations for owners based in the UK who were never on-site. Every HR decision went through me first, with no colleague to check the work and no manager to escalate to.</p>
-        <p class="proof-stats">100% day-one readiness for every hire. Systems that ran seven years without a structural change. A 50% efficiency gain. Zero coverage gaps in seven years.</p>
-        <p style="margin-top:1rem;"><strong>Start with a sprint.</strong> Two to three weeks, fixed price, one outcome. If it works, we build the rest. <a href="#contact" style="color:var(--black);">Work together &rarr;</a></p>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid var(--border); gap: 2rem; flex-wrap: wrap;">
+        <div>
+          <div class="case-tag" style="margin-bottom: 0.5rem;">The build &middot; Most popular</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;">People operations, from zero</h3>
+          <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">You stop being the HR department. The system runs without you in the room.</p>
+        </div>
+        <a href="offers/people-ops-build.html" class="btn-secondary" style="white-space: nowrap; flex-shrink: 0;">See details &#8594;</a>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; gap: 2rem; flex-wrap: wrap;">
+        <div>
+          <div class="case-tag" style="margin-bottom: 0.5rem;">Ongoing &middot; Retainer</div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.4rem;">Fractional people ops</h3>
+          <p style="color: var(--muted); font-size: 0.95rem; margin: 0;">People operations, handled. You sleep, it runs.</p>
+        </div>
+        <a href="offers/fractional-people-ops.html" class="btn-secondary" style="white-space: nowrap; flex-shrink: 0;">See details &#8594;</a>
+      </div>
+
+    </div>
+    <div class="offers-proof" style="margin-top: 3rem;">
+      <h3>Why a founder trusts this to someone they never see</h3>
+      <p>I ran this model for eight years for a business with owners based in the UK and no one on the ground &#8212; every HR decision rested entirely with me: hiring, firing, vendor contracts, legal compliance. No colleague to check the work. No manager to escalate to. The owners gave me full authority and stepped back. That is not a setup most people are comfortable working in. I have never worked any other way.</p>
+      <p class="section-intro"><strong>100% day-one readiness for every hire. Systems that ran seven years without a structural change. A 50% efficiency gain. Zero coverage gaps in seven years.</strong></p>
+      <p style="margin-top: 1rem;"><strong>Start with a sprint.</strong> Fixed price, one outcome. If it works, we build the rest. <a href="#contact">Work together &#8594;</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="methodology" class="methodology-section">
+  <div class="container-narrow">
+    <div class="tag">Methodology</div>
+    <h2>Three diagnostic tools I use to figure out what is actually broken before I design a fix.</h2>
+
+    <p><strong>5-system communication diagnostic</strong><br>
+    Maps internal communication across five operational systems to find where a customer-facing breakdown actually starts. Used when the problem looks like a service issue but the root cause is internal.</p>
+
+    <p><strong>Structured knowledge extraction</strong><br>
+    A diagnostic interview method for organizations with strong intuitive practice and no documented model. Surfaces the rules operators follow but cannot articulate. Result: a documented operational model that matches what the organization actually does.</p>
+
+    <p><strong>Baseline measurement survey</strong><br>
+    A quantitative instrument deployed before designing any intervention. Draws on diagnostic work across hospitality, food distribution, and private services to show where communication quality correlates with disengagement. Gives you a concrete number before you spend on a fix.</p>
+
+    <p>All three share one operating principle: what an organization actually does is often different from what it describes doing. Specificity is what makes a framework useful.</p>
+  </div>
+</section>
+
+<section id="background">
+  <div class="container">
+    <div class="tag">Background</div>
+    <h2>Education and languages.</h2>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>Education</h3>
+        <p><strong>Bachelor&#8217;s Degree in Human Relations and Organizational Communication</strong></p>
+        <div class="label">Polytechnic Institute of Leiria, Portugal &#183; 2024</div>
+        <div class="label" style="margin-top: 0.75rem;">Focus areas: Corporate Communication, Human Resources, Organizational Development.</div>
+      </div>
+      <div class="info-block">
+        <h3>Working languages</h3>
+        <p><strong>English</strong> &#183; Advanced (C1)</p>
+        <p><strong>Portuguese</strong> &#183; Native</p>
+        <p><strong>Spanish</strong> &#183; Working</p>
       </div>
     </div>
   </div>
+</section>
 
-  <hr class="section-divider" />
-
-  <div class="section-alt">
-    <div class="content-section" id="methodology">
-      <div class="section-sidebar">
-        <span class="section-label">Methodology</span>
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="tag">Contact</div>
+    <h2>Let&#8217;s work together.</h2>
+    <p class="section-intro">Tell me what&#8217;s broken. I&#8217;ll tell you whether I can fix it and what that looks like. No sales process.</p>
+    <p class="section-intro" style="margin-top: 0.5rem; font-size: 0.95em;">A brief, a half-formed question, or just a situation &#8212; all of that works.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Response time</div>
+        <div class="value">Within 24 hours</div>
       </div>
-      <div class="section-body">
-        <h2>Three diagnostic tools I use to figure out what is actually broken before I design a fix.</h2>
-        <div class="method-block">
-          <h3>5-system communication diagnostic</h3>
-          <p>Maps internal communication across five operational systems to find where a customer-facing breakdown actually starts. Used when the problem looks like a service issue but the root cause is internal.</p>
-        </div>
-        <div class="method-block">
-          <h3>Structured knowledge extraction</h3>
-          <p>A diagnostic interview method for organizations with strong intuitive practice and no documented model. Surfaces the rules operators follow but cannot articulate. Result: a documented operational model that matches what the organization actually does.</p>
-        </div>
-        <div class="method-block">
-          <h3>Baseline measurement survey</h3>
-          <p>A quantitative instrument deployed before designing any intervention. Shows where communication quality correlates with disengagement. Gives you a concrete number before you spend on a fix.</p>
-        </div>
-        <p style="margin-top:1.5rem;">All three share one operating principle: what an organization actually does is often different from what it describes doing. Specificity is what makes a framework useful.</p>
+      <div class="contact-item">
+        <div class="label">LinkedIn</div>
+        <div class="value"><a href="https://www.linkedin.com/in/karina-souza-7b5667247/" target="_blank" rel="noopener">linkedin.com/in/karina-souza-7b5667247</a></div>
       </div>
     </div>
   </div>
+</section>
 
-  <hr class="section-divider" />
-
-  <div class="content-section" id="background">
-    <div class="section-sidebar">
-      <span class="section-label">Background</span>
-    </div>
-    <div class="section-body">
-      <h2>Education and languages.</h2>
-      <div class="info-grid">
-        <div class="info-block">
-          <h3>Education</h3>
-          <p><strong>Bachelor's Degree in Human Relations and Organizational Communication</strong></p>
-          <p class="sublabel">Polytechnic Institute of Leiria, Portugal &middot; 2024</p>
-          <p class="sublabel" style="margin-top:0.5rem;">Corporate Communication, Human Resources, Organizational Development.</p>
-        </div>
-        <div class="info-block">
-          <h3>Languages</h3>
-          <p><strong>Portuguese</strong> &middot; Native</p>
-          <p><strong>English</strong> &middot; Advanced (C1)</p>
-          <p><strong>Spanish</strong> &middot; Working</p>
-        </div>
-      </div>
-    </div>
+<footer>
+  <div class="container">
+    <div>&#169; 2026 Karina Souza &#183; HR &amp; People Operations for founder-led businesses</div>
   </div>
-
-  <div class="section-alt" style="border-top: 1px solid var(--border);">
-    <div class="content-section" id="contact">
-      <div class="section-sidebar">
-        <span class="section-label">Contact</span>
-      </div>
-      <div class="section-body">
-        <h2>Let's work together.</h2>
-        <p>Tell me what's broken. I'll tell you whether I can fix it and what that looks like. No sales process.</p>
-        <p>A brief, a half-formed question, or just a situation &mdash; all of that works.</p>
-        <div class="btn-group" style="margin-top:2rem;">
-          <a href="mailto:karina.jeronimo@hotmail.com" class="btn btn-primary">Send a message</a>
-        </div>
-        <div class="contact-meta">
-          <div>
-            <strong>Response time</strong>
-            Within 24 hours
-          </div>
-          <div>
-            <strong>Location</strong>
-            Lisbon, Portugal
-          </div>
-          <div>
-            <strong>LinkedIn</strong>
-            <a href="https://www.linkedin.com/in/karina-souza-7b5667247/" target="_blank" rel="noopener">linkedin.com/in/karina-souza-7b5667247</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <span>&copy; 2026 Karina Souza &middot; HR &amp; People Operations</span>
-    <span>Lisbon, Portugal &middot; Europe and Canada, remote</span>
-  </footer>
+</footer>
 
 </body>
 </html>
