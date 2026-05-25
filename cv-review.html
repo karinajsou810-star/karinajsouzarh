@@ -1,216 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV Review · Karina Souza</title>
-<meta name="description" content="CV review from someone who built the screening criteria — 25 to 30 profiles a day, 10 placements a week. What gets flagged, what gets skipped, and what to fix before you lose the first screen.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
-<style>
-.package-box {
-  border: 1px solid var(--border, #e0ddd8);
-  border-radius: 8px;
-  padding: 2.5rem;
-  margin-top: 2rem;
-  background: #fff;
-}
-.package-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border, #e0ddd8);
-}
-.package-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--text, #1a1a1a);
-  margin: 0;
-}
-.package-subtitle {
-  font-size: 0.9rem;
-  color: var(--text-muted, #666);
-  margin: 0.25rem 0 0;
-}
-.package-price {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--accent, #c9a96e);
-  white-space: nowrap;
-}
-.deliverables-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-.deliverable-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  font-size: 0.9rem;
-  color: var(--text, #1a1a1a);
-  line-height: 1.4;
-}
-.deliverable-item::before {
-  content: '→';
-  color: var(--accent, #c9a96e);
-  flex-shrink: 0;
-  margin-top: 0.05em;
-}
-.package-note {
-  font-size: 0.875rem;
-  color: var(--text-muted, #666);
-  border-top: 1px solid var(--border, #e0ddd8);
-  padding-top: 1rem;
-  margin-top: 0.5rem;
-}
-.results-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-.result-card {
-  background: var(--bg-alt, #f8f8f6);
-  border-radius: 6px;
-  padding: 1.5rem;
-}
-.result-outcome {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--text, #1a1a1a);
-  margin-bottom: 0.5rem;
-}
-.result-context {
-  font-size: 0.875rem;
-  color: var(--text-muted, #666);
-  line-height: 1.5;
-}
-.dual-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.dual-cta .btn-primary,
-.dual-cta .btn-secondary {
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CV review from someone who built the screening criteria — 25 to 30 profiles a day, 10 placements a week. What gets flagged, what gets skipped, and what to fix before you lose the first screen." />
+  <title>CV Review · Karina Souza</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #111;
+      --white: #fff;
+      --grey: #555;
+      --light: #f5f5f3;
+      --border: #e0e0db;
+      --font: 'Georgia', serif;
+      --sans: system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--black);
+      background: var(--white);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    nav a.cta-nav {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--white);
+      background: var(--black);
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      transition: opacity 0.2s;
+    }
+
+    nav a.cta-nav:hover { opacity: 0.8; }
+
+    section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    section + section { border-top: 1px solid var(--border); }
+
+    .hero { padding-top: 6rem; padding-bottom: 5rem; }
+
+    .hero .label {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      font-weight: normal;
+      margin-bottom: 2.5rem;
+      max-width: 640px;
+    }
+
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 0.75rem 1.6rem;
+      border-radius: 4px;
+      transition: opacity 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary { background: var(--black); color: var(--white); }
+    .btn-secondary { border: 1px solid var(--black); color: var(--black); background: transparent; }
+    .btn:hover { opacity: 0.75; }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: normal;
+      line-height: 1.3;
+      margin-bottom: 1.8rem;
+    }
+
+    p { color: #333; margin-bottom: 1.2rem; max-width: 640px; }
+    p:last-child { margin-bottom: 0; }
+
+    #contact {
+      background: var(--light);
+      max-width: 100%;
+      padding: 5rem 2rem;
+    }
+
+    #contact .inner { max-width: 720px; margin: 0 auto; }
+
+    .contact-meta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+    }
+
+    .contact-meta div strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--grey);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-meta a {
+      color: var(--black);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .form-wrapper {
+      margin-top: 2rem;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .form-wrapper iframe { width: 100%; border: none; display: block; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--grey);
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem; }
+      section { padding: 3.5rem 1.25rem; }
+      .hero { padding-top: 4rem; }
+      #contact { padding: 3.5rem 1.25rem; }
+    }
+  </style>
 </head>
-<body>
-<nav>
-<div class="container">
-<a href="#top" class="logo">Karina <span>Souza</span></a>
-<ul>
-<li><a href="#contact" class="nav-cta">Book a review</a></li>
-</ul>
-</div>
-</nav>
+<body id="top">
 
-<header class="hero" id="top">
-<div class="container">
-<div style="max-width: 760px;">
-<p class="tag">CV review</p>
-<h1>From the Other Side of the Screen. <span>What I built screening 30 profiles a day — and what it tells me about yours.</span></h1>
-<p class="subhead">For a year I screened 25 to 30 candidate profiles a day against live employer vacancies — and built the criteria that decided which ones got forwarded and which ones didn't. Ten placements a week. Zero eligibility mismatches across a full contract cycle. A CV review with me is that screening logic applied to your profile.</p>
-<div class="hero-actions">
-<a href="#contact" class="btn-primary">Book a review</a>
-<a href="#full-package" class="btn-secondary">See the full package</a>
-</div>
-</div>
-</div>
-</header>
+  <nav>
+    <a href="#top" class="logo">Karina Souza</a>
+    <a href="https://calendly.com/karinajsou810/core" target="_blank" rel="noopener" class="cta-nav">Book a review</a>
+  </nav>
 
-<section>
-<div class="container-narrow">
-<p class="tag">The credential</p>
-<h2>What the work actually was.</h2>
-<p>For a year I screened 25 to 30 candidate profiles a day, matched them to live employer vacancies, and ran placement cases across three candidate categories — youth employment, foreign nationals, and long-term unemployed. Ten placements a week. Zero eligibility mismatches across a full contract cycle.</p>
-<p>My role wasn't just to apply the criteria. It was to build them. What question catches a gap in experience. What phrasing in a CV signals a candidate hasn't read the job description. What a confident-sounding profile is actually hiding.</p>
-<p>That throughput doesn't come from instinct. It comes from a system. I know what a recruiter is looking for because I built the system they use.</p>
-</div>
-</section>
-
-<section style="background: var(--bg-alt);">
-<div class="container-narrow">
-<p class="tag">The review</p>
-<h2>What a review with me looks like.</h2>
-<p>I read your CV the way a recruiter reads it on the third profile of the morning: fast, with criteria already loaded, looking for reasons to skip. The review identifies what breaks that scan and what survives it.</p>
-<p>You get written feedback on what is working against you — section by section — and specific changes to make before you submit again. No generic advice. No filler. The feedback is based on what actually stops a profile at the screening stage, not on what looks polished.</p>
-<p>This works for candidates applying anywhere — in English or Portuguese. Wherever the role is, the screening logic is the same.</p>
-</div>
-</section>
-
-<section id="full-package">
-<div class="container-narrow">
-<p class="tag">The full package</p>
-<h2>CV review is where it starts. This is where it ends.</h2>
-<p>You have been applying. Nothing comes back. You checked the format. Updated the summary. Added keywords from job descriptions. Sent it anyway. Still nothing.</p>
-<p>The problem usually is not the CV. It is how the CV is being read — and by whom, and in what order. A recruiter with 30 profiles in the queue does not read. They scan for reasons to skip. If your profile does not pass that scan in the first few seconds, it does not matter what it says after.</p>
-<p>The Core package works at that level. One session to diagnose exactly where your profile loses the screener. A keyword set built to work in ATS and on LinkedIn at the same time. A 30-day plan that tells you what to do and in what order.</p>
-
-<div class="package-box">
-  <div class="package-header">
-    <div>
-      <p class="package-name">Core — CV + LinkedIn + Strategy</p>
-      <p class="package-subtitle">Full session · Written deliverables · 30-day plan</p>
+  <section class="hero">
+    <p class="label">CV Review</p>
+    <h1>From the Other Side of the Screen. What I built screening 30 profiles a day — and what it tells me about yours.</h1>
+    <div class="btn-group">
+      <a href="https://calendly.com/karinajsou810/core" target="_blank" rel="noopener" class="btn btn-primary">Book a review</a>
+      <a href="#contact" class="btn btn-secondary">Send me your CV</a>
     </div>
-    <div class="package-price">€190</div>
-  </div>
-  <div class="deliverables-grid">
-    <div class="deliverable-item">Personalized questionnaire before the session</div>
-    <div class="deliverable-item">1-hour Zoom session — diagnosis, strategy, keywords, action plan</div>
-    <div class="deliverable-item">Strategic PDF report + session recording</div>
-    <div class="deliverable-item">ATS-ready CV template</div>
-    <div class="deliverable-item">Unified keywords for ATS and LinkedIn — one aligned set</div>
-    <div class="deliverable-item">LinkedIn content strategy</div>
-    <div class="deliverable-item">Cover letter opening — your angle and narrative from the session, ready to adapt per company</div>
-    <div class="deliverable-item">30-day action plan</div>
-  </div>
-  <p class="package-note">Available in English, Portuguese, and Spanish.</p>
-</div>
-</div>
-</section>
+  </section>
 
-<section id="contact" class="contact-section">
-<div class="container">
-<p class="tag">Get started</p>
-<h2>Send me your CV.</h2>
-<p class="section-intro">Send your CV and the type of role you are targeting. I will tell you whether I am the right fit and what the next step looks like. No sales process.</p>
-<p class="section-intro" style="margin-top: 0.5rem; font-size: 0.95em;">A role title, a sector, a situation — any of that works as a starting point.</p>
-<div class="contact-grid">
-<div class="contact-item">
-<div class="label">Response time</div>
-<div class="value">Within 24 hours</div>
-</div>
-<div class="contact-item">
-<div class="label">LinkedIn</div>
-<div class="value"><a href="https://www.linkedin.com/in/karina-souza-7b5667247/" target="_blank" rel="noopener">linkedin.com/in/karina-souza-7b5667247</a></div>
-</div>
-</div>
-<div class="dual-cta">
-<a href="https://www.linkedin.com/in/karina-souza-7b5667247/" target="_blank" rel="noopener" class="btn-primary">Book a CV review</a>
-<a href="https://www.linkedin.com/in/karina-souza-7b5667247/" target="_blank" rel="noopener" class="btn-secondary">Book the Core package</a>
-</div>
-</div>
-</section>
+  <section id="credential">
+    <p class="section-label">The credential</p>
+    <h2>What the work actually was.</h2>
+    <p>For a year I screened 25 to 30 candidate profiles a day, matched them to live employer vacancies, and ran placement cases across three candidate categories — youth employment, foreign nationals, and long-term unemployed. Ten placements a week. Zero eligibility mismatches across a full contract cycle.</p>
+    <p>My role was not just to apply the criteria. It was to build them. What question catches a gap in experience. What phrasing in a CV signals a candidate has not read the job description. What a confident-sounding profile is actually hiding.</p>
+    <p>That throughput does not come from instinct. It comes from a system. I know what a recruiter is looking for because I built the system they use.</p>
+  </section>
 
-<footer>
-<div class="container">
-<div>&copy; 2026 Karina Souza · CV Review &amp; Career Strategy</div>
-</div>
-</footer>
+  <section id="review">
+    <p class="section-label">The review</p>
+    <h2>What a review with me looks like.</h2>
+    <p>I read your CV the way a recruiter reads it on the third profile of the morning: fast, with criteria already loaded, looking for reasons to skip. The review identifies what breaks that scan and what survives it.</p>
+    <p>You get written feedback on what is working against you — section by section — and specific changes to make before you submit again. No generic advice. No filler. The feedback is based on what actually stops a profile at the screening stage, not on what looks polished.</p>
+    <p>This works for candidates applying anywhere — in English or Portuguese. Wherever the role is, the screening logic is the same.</p>
+    <div class="btn-group" style="margin-top: 2rem;">
+      <a href="https://calendly.com/karinajsou810/core" target="_blank" rel="noopener" class="btn btn-primary">Book a review</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="inner">
+      <p class="section-label">Get started</p>
+      <h2>Send me your CV.</h2>
+      <p>Fill in your details and tell me the type of role you are targeting. I will tell you whether I am the right fit and what the next step looks like. No sales process.</p>
+      <p>A role title, a sector, a situation — any of that works as a starting point.</p>
+      <div class="form-wrapper">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdwxPZhiGvQ9H9nlFyi8IeBCXncB0syj5kJLRq9rWU8CtQgXA/viewform?embedded=true"
+          height="620"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">
+          A carregar...
+        </iframe>
+      </div>
+      <div class="contact-meta">
+        <div>
+          <strong>Response time</strong>
+          Within 24 hours
+        </div>
+        <div>
+          <strong>LinkedIn</strong>
+          <a href="https://www.linkedin.com/in/karina-souza-7b5667247/" target="_blank" rel="noopener">linkedin.com/in/karina-souza-7b5667247</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Karina Souza &middot; CV Review &amp; Career Strategy
+  </footer>
+
 </body>
 </html>
