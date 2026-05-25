@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The hiring sprint Â· Karina Souza</title>
+  <meta name="description" content="A fixed-window recruiting push to fill your open roles. Sourcing, screening, shortlist, interview coordination, and a clean pipeline handover.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .offer-hero { padding: 4rem 0 3rem; }
+    .offer-lead { font-size: 1.3rem; color: var(--muted); max-width: 640px; margin: 1rem 0 2rem; line-height: 1.65; }
+    .offer-meta { display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .offer-meta span { background: var(--bg-alt); border: 1px solid var(--border); padding: 0.4rem 0.9rem; border-radius: 4px; font-size: 0.82rem; color: var(--muted); font-weight: 500; }
+    .offer-body { padding-bottom: 2rem; }
+    .offer-section { padding: 3rem 0; border-top: 1px solid var(--border); }
+    .offer-section-label { font-size: 0.82rem; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 1.5rem; font-weight: 600; }
+    .offer-section h2 { font-size: 1.6rem; margin-bottom: 1.25rem; }
+    .deliverables { list-style: none; padding: 0; margin: 0; }
+    .deliverables li { padding: 0.9rem 0; border-bottom: 1px solid var(--border); color: var(--text-2); display: flex; gap: 1rem; align-items: flex-start; font-size: 1rem; line-height: 1.6; }
+    .deliverables li:last-child { border-bottom: none; }
+    .deliverables li::before { content: "&#8594;"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+    .steps-list { list-style: none; padding: 0; margin: 0; }
+    .steps-list li { padding: 1.25rem 0; border-bottom: 1px solid var(--border); color: var(--text-2); display: flex; gap: 1.5rem; align-items: flex-start; }
+    .steps-list li:last-child { border-bottom: none; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent); font-weight: 600; flex-shrink: 0; width: 2rem; line-height: 1.1; }
+    .step-content strong { display: block; color: var(--text); font-weight: 600; margin-bottom: 0.3rem; }
+    .step-content { font-size: 1rem; line-height: 1.65; }
+    .proof-box { background: var(--bg-alt); padding: 2rem; border-radius: 8px; border-left: 3px solid var(--accent); }
+    .proof-box p { color: var(--text-2); margin: 0 0 1.5rem; line-height: 1.7; }
+    .proof-nums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .proof-num .n { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--accent); font-weight: 600; line-height: 1; }
+    .proof-num .l { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; }
+    .for-text { font-size: 1.05rem; color: var(--text-2); line-height: 1.75; max-width: 700px; }
+    .offer-cta-block { background: var(--text); color: var(--bg); padding: 5rem 0; text-align: center; }
+    .offer-cta-block h2 { color: var(--bg); font-size: 2.2rem; margin-bottom: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .offer-cta-block p { color: rgba(248,244,237,0.7); margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .breadcrumb { padding: 2.5rem 0 0; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.05em; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-dark); }
+    @media (max-width: 768px) {
+      .offer-hero { padding: 2.5rem 0 2rem; }
+      .proof-nums { grid-template-columns: repeat(2, 1fr); }
+      .offer-cta-block { padding: 3.5rem 0; }
+      .offer-cta-block h2 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="logo"><span>Karina Souza</span></a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#offers">How I can help</a>
+    <a href="../index.html#methodology">Methodology</a>
+    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="breadcrumb"><a href="../index.html#offers">&#8592; All services</a></div>
+</div>
+
+<div class="container">
+  <div class="offer-hero">
+    <div class="tag">Recruitment &middot; Entry point</div>
+    <h1 style="font-size: 3rem; max-width: 680px; margin-bottom: 0.75rem; line-height: 1.15;">The hiring sprint</h1>
+    <p class="offer-lead">Your open roles get filled. You stop living in your inbox.</p>
+    <div class="offer-meta">
+      <span>2&ndash;3 weeks</span>
+      <span>Fixed scope</span>
+      <span>Fixed price</span>
+      <span>One named outcome</span>
+    </div>
+    <a href="../index.html#contact" class="btn-primary">Start a conversation</a>
+  </div>
+</div>
+
+<div class="container-narrow offer-body">
+
+  <div class="offer-section">
+    <div class="offer-section-label">What you get</div>
+    <ul class="deliverables">
+      <li>Role scoping session &mdash; I map exactly who you need before sourcing begins, so we don&rsquo;t spend two weeks on the wrong profiles</li>
+      <li>Active sourcing across the right channels for your role and seniority level</li>
+      <li>Screening at volume &mdash; 25 to 30 profiles evaluated per day against your actual criteria, not a generic checklist</li>
+      <li>A shortlist of qualified candidates with written evaluation notes, ready to send to your hiring managers</li>
+      <li>Interview scheduling coordinated end-to-end</li>
+      <li>Clean pipeline handover at the end of the sprint &mdash; structured, documented, yours to run forward</li>
+    </ul>
+  </div>
+
+  <div class="offer-section">
+    <div class="offer-section-label">Who this is for</div>
+    <p class="for-text">You have open roles and no recruiter. The hiring process is sitting in your inbox between product decisions and investor calls. You know what you need but you don&rsquo;t have the hours to source, screen, and coordinate interviews at the pace the business requires. You need the roles filled in a defined window, and you need the work done without building out a function you&rsquo;re not ready to staff.</p>
+  </div>
+
+  <div class="offer-section">
+    <div class="offer-section-label">How it works</div>
+    <ol class="steps-list">
+      <li>
+        <span class="step-num">1</span>
+        <div class="step-content"><strong>Brief</strong>Day one. Role scope, must-haves, deal-breakers, timeline. This is where most recruiters skip ahead &mdash; I don&rsquo;t.</div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div class="step-content"><strong>Sourcing</strong>Active outreach begins. I use the channel that fits the role: ATS databases, LinkedIn, referral networks, job boards. Not all four for every position.</div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div class="step-content"><strong>Screening</strong>Profiles evaluated daily against your criteria. Running shortlist maintained throughout. Strong candidates flagged as they surface, not at the end of the sprint.</div>
+      </li>
+      <li>
+        <span class="step-num">4</span>
+        <div class="step-content"><strong>Shortlist and handover</strong>A clean, documented shortlist with evaluation notes. Interview scheduling handled. Pipeline handed over in a format your team can use.</div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="offer-section">
+    <div class="offer-section-label">The numbers behind this</div>
+    <div class="proof-box">
+      <p>At Portugal&rsquo;s national employment agency, I ran full-cycle recruitment across three priority candidate categories simultaneously &mdash; processing 25 to 30 profiles per day and achieving 10 placements per week as an individual contributor. Zero eligibility mismatches across the full contract cycle.</p>
+      <div class="proof-nums">
+        <div class="proof-num"><div class="n">10/wk</div><div class="l">Individual placement rate</div></div>
+        <div class="proof-num"><div class="n">25&ndash;30</div><div class="l">Profiles screened per day</div></div>
+        <div class="proof-num"><div class="n">0</div><div class="l">Eligibility mismatches</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="offer-cta-block">
+  <div class="container">
+    <h2>Ready to fill the roles?</h2>
+    <p>Tell me what you&rsquo;re hiring for. I&rsquo;ll tell you whether a sprint makes sense and what it looks like.</p>
+    <a href="../index.html#contact" class="btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Start a conversation</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>&#169; 2026 Karina Souza &middot; HR &amp; People Operations</div>
+    <div><a href="../index.html" style="color: inherit; text-decoration: none; opacity: 0.6;">Back to home</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
