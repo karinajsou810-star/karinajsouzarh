@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People operations, from zero Â· Karina Souza</title>
+  <meta name="description" content="A 2â4 week build for companies hiring for the first time or scaling past 10 people. Onboarding toolkit, ATS workflow, interview kit, vendor setup, and a playbook your team runs without me.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .offer-hero { padding: 4rem 0 3rem; }
+    .offer-lead { font-size: 1.3rem; color: var(--muted); max-width: 640px; margin: 1rem 0 2rem; line-height: 1.65; }
+    .offer-meta { display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .offer-meta span { background: var(--bg-alt); border: 1px solid var(--border); padding: 0.4rem 0.9rem; border-radius: 4px; font-size: 0.82rem; color: var(--muted); font-weight: 500; }
+    .offer-body { padding-bottom: 2rem; }
+    .offer-section { padding: 3rem 0; border-top: 1px solid var(--border); }
+    .offer-section-label { font-size: 0.82rem; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 1.5rem; font-weight: 600; }
+    .deliverables { list-style: none; padding: 0; margin: 0; }
+    .deliverables li { padding: 0.9rem 0; border-bottom: 1px solid var(--border); color: var(--text-2); display: flex; gap: 1rem; align-items: flex-start; font-size: 1rem; line-height: 1.6; }
+    .deliverables li:last-child { border-bottom: none; }
+    .deliverables li::before { content: "&#8594;"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+    .steps-list { list-style: none; padding: 0; margin: 0; }
+    .steps-list li { padding: 1.25rem 0; border-bottom: 1px solid var(--border); color: var(--text-2); display: flex; gap: 1.5rem; align-items: flex-start; }
+    .steps-list li:last-child { border-bottom: none; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--accent); font-weight: 600; flex-shrink: 0; width: 2rem; line-height: 1.1; }
+    .step-content strong { display: block; color: var(--text); font-weight: 600; margin-bottom: 0.3rem; }
+    .step-content { font-size: 1rem; line-height: 1.65; }
+    .proof-box { background: var(--bg-alt); padding: 2rem; border-radius: 8px; border-left: 3px solid var(--accent); }
+    .proof-box p { color: var(--text-2); margin: 0 0 1.5rem; line-height: 1.7; }
+    .proof-nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .proof-num .n { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--accent); font-weight: 600; line-height: 1; }
+    .proof-num .l { font-size: 0.82rem; color: var(--muted); margin-top: 0.35rem; }
+    .for-text { font-size: 1.05rem; color: var(--text-2); line-height: 1.75; max-width: 700px; }
+    .offer-cta-block { background: var(--text); color: var(--bg); padding: 5rem 0; text-align: center; }
+    .offer-cta-block h2 { color: var(--bg); font-size: 2.2rem; margin-bottom: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .offer-cta-block p { color: rgba(248,244,237,0.7); margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .breadcrumb { padding: 2.5rem 0 0; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.05em; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent-dark); }
+    .popular-badge { display: inline-block; background: var(--accent); color: white; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 3px; margin-left: 0.75rem; vertical-align: middle; position: relative; top: -0.15rem; }
+    @media (max-width: 768px) {
+      .offer-hero { padding: 2.5rem 0 2rem; }
+      .proof-nums { grid-template-columns: repeat(2, 1fr); }
+      .offer-cta-block { padding: 3.5rem 0; }
+      .offer-cta-block h2 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="../index.html" class="logo"><span>Karina Souza</span></a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#work">Work</a>
+    <a href="../index.html#offers">How I can help</a>
+    <a href="../index.html#methodology">Methodology</a>
+    <a href="../index.html#contact" class="nav-cta">Hire me</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="breadcrumb"><a href="../index.html#offers">&#8592; All services</a></div>
+</div>
+
+<div class="container">
+  <div class="offer-hero">
+    <div class="tag">The build <span class="popular-badge">Most popular</span></div>
+    <h1 style="font-size: 3rem; max-width: 720px; margin-bottom: 0.75rem; line-height: 1.15;">People operations, from zero</h1>
+    <p class="offer-lead">You stop being the HR department. The system runs without you in the room.</p>
+    <div class="offer-meta">
+      <span>2&ndash;4 weeks</span>
+      <span>Fixed scope</span>
+      <span>Yours to keep</span>
+      <span>Built to outlast me</span>
+    </div>
+    <a href="../index.html#contact" class="btn-primary">Build the system</a>
+  </div>
+</div>
+
+<div class="container-narrow offer-body">
+
+  <div class="offer-section">
+    <div class="offer-section-label">What you get</div>
+    <ul class="deliverables">
+      <li>Onboarding toolkit &mdash; checklists, role-specific templates, and a day-1 schedule that delivers operational readiness from the first day</li>
+      <li>ATS workflow configured in your existing tool (Notion, Lever, Ashby, or equivalent) with documented stages and handoff criteria</li>
+      <li>Structured interview kit with competency-based questions and scoring guides for each role type you hire for</li>
+      <li>Vendor and payroll setup guidance for EOR and payroll tools (Deel, Remote, or equivalent) &mdash; I configure or document the process, you own it</li>
+      <li>A one-page operational playbook your team runs without me &mdash; clear owners, clear triggers, no ambiguity</li>
+      <li>Everything documented in a format that holds when people leave</li>
+    </ul>
+  </div>
+
+  <div class="offer-section">
+    <div class="offer-section-label">Who this is for</div>
+    <p class="for-text">You&rsquo;re hiring for the first time, or you&rsquo;ve crossed 10 people and the informal approach is starting to break. Onboarding is different every time. Interview decisions are inconsistent. New hires ask the same questions and nobody has a documented answer. You are personally involved in every step because the system doesn&rsquo;t exist yet. You don&rsquo;t need a full-time Head of People &mdash; you need the function built so someone else can run it.</p>
+  </div>
+
+  <div class="offer-section">
+    <div class="offer-section-label">How it works</div>
+    <ol class="steps-list">
+      <li>
+        <span class="step-num">1</span>
+        <div class="step-content"><strong>Audit</strong>What exists, what&rsquo;s missing, what&rsquo;s causing friction now. I look at your current tools, processes, and informal practices before designing anything.</div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div class="step-content"><strong>Design</strong>System architecture: which tools, which processes, which documentation gets built. You approve the structure before I build it.</div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div class="step-content"><strong>Build</strong>I build the full system. You review as we go. No surprises at handover.</div>
+      </li>
+      <li>
+        <span class="step-num">4</span>
+        <div class="step-content"><strong>Handover</strong>Everything documented, owners assigned, questions answered. I walk through it with your team and confirm they can run it without me before I close the engagement.</div>
+      </li>
+    </ol>
+  </div>
+
+  <div class="offer-section">
+    <div class="offer-section-label">Eight years of proof</div>
+    <div class="proof-box">
+      <p>I built this exact system from scratch at a private services company with no prior HR documentation, no external support, and no on-site management. The systems I designed in the first year are still the systems the organization runs on.</p>
+      <div class="proof-nums">
+        <div class="proof-num"><div class="n">100%</div><div class="l">Day-one readiness for every hire, 8 years</div></div>
+        <div class="proof-num"><div class="n">7 yrs</div><div class="l">Without a structural change to the system</div></div>
+        <div class="proof-num"><div class="n">50%</div><div class="l">Efficiency gain against informal baseline</div></div>
+        <div class="proof-num"><div class="n">0</div><div class="l">Coverage gaps across 7 operational years</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="offer-cta-block">
+  <div class="container">
+    <h2>Ready to stop being the HR department?</h2>
+    <p>Tell me where you are and what&rsquo;s breaking. I&rsquo;ll tell you what the build looks like and how long it takes.</p>
+    <a href="../index.html#contact" class="btn-primary" style="font-size: 1rem; padding: 1rem 2.5rem;">Build the system</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>&#169; 2026 Karina Souza &middot; HR &amp; People Operations</div>
+    <div><a href="../index.html" style="color: inherit; text-decoration: none; opacity: 0.6;">Back to home</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
